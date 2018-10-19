@@ -1,0 +1,8 @@
+# Auth
+auth.py
+
+#pycache
+__pycache__/
+
+#Text
+*.txt
