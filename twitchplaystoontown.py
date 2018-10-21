@@ -42,45 +42,536 @@ def gameControl():
 	}]
 
 	movement = {
-		"up": {
-			"key": "up",
-			"down": False
+		"inputs":{
+			"up": {
+				"key": "up"
+			},
+			"back": {
+				"key": "down"
+			},
+			"right": {
+				"key": "right"
+			},
+			"left": {
+				"key": "left"
+			},
+			"jump": {
+				"key": "ctrl"
+			}
+		}
+	}
+
+	gags = {
+		"feather": {
+			"buy": {
+				"x": 780,
+				"y": 288
+			},
+			"use": {
+				"x": 650,
+				"y": 316
+			}
 		},
-		"back": {
-			"key": "down",
-			"down": False
+		"megaphone": {
+			"buy": {
+				"x": 859,
+				"y": 288
+			},
+			"use": {
+				"x": 739,
+				"y": 316
+			}
 		},
-		"right": {
-			"key": "right",
-			"down": False
+		"lipstick": {
+			"buy": {
+				"x": 938,
+				"y": 228
+			},
+			"use": {
+				"x": 828,
+				"y": 316
+			}
 		},
-		"left": {
-			"key": "left",
-			"down": False
+		"bamboo cane": {
+			"buy": {
+				"x": 1017,
+				"y": 288
+			},
+			"use": {
+				"x": 913,
+				"y": 316
+			}
 		},
-		"jump": {
-			"key": "ctrl",
-			"down": False
+		"pixie dust": {
+			"buy": {
+				"x": 1096,
+				"y": 288
+			},
+			"use": {
+				"x": 1000,
+				"y": 316
+			}
+		},
+		"juggling balls": {
+			"buy": {
+				"x": 1175,
+				"y": 288
+			},
+			"use": {
+				"x": 1090,
+				"y": 316
+			}
+		},
+		"high dive": {
+			"buy": {
+				"x": 1254,
+				"y": 288
+			},
+			"use": {
+				"x": 1177,
+				"y": 316
+			}
+		},
+		"banana peel": {
+			"buy": {
+				"x": 780,
+				"y": 341
+			},
+			"use": {
+				"x": 650,
+				"y": 375
+			}
+		},
+		"rake": {
+			"buy": {
+				"x": 859,
+				"y": 341
+			},
+			"use": {
+				"x": 739,
+				"y": 375
+			}
+		},
+		"marbles": {
+			"buy": {
+				"x": 938,
+				"y": 341
+			},
+			"use": {
+				"x": 828,
+				"y": 375
+			}
+		},
+		"quicksand": {
+			"buy": {
+				"x": 1017,
+				"y": 341
+			},
+			"use": {
+				"x": 913,
+				"y": 375
+			}
+		},
+		"trapdoor": {
+			"buy": {
+				"x": 1096,
+				"y": 341
+			},
+			"use": {
+				"x": 1000,
+				"y": 375
+			}
+		},
+		"tnt": {
+			"buy": {
+				"x": 1175,
+				"y": 341
+			},
+			"use": {
+				"x": 1090,
+				"y": 375
+			}
+		},
+		"railroad": {
+			"buy": {
+				"x": 1254,
+				"y": 341
+			},
+			"use": {
+				"x": 1177,
+				"y": 375
+			}
+		},
+		"1$ bill": {
+			"buy": {
+				"x": 780,
+				"y": 394
+			},
+			"use": {
+				"x": 650,
+				"y": 433
+			}
+		},
+		"small magnet": {
+			"buy": {
+				"x": 859,
+				"y": 394
+			},
+			"use": {
+				"x": 739,
+				"y": 433
+			}
+		},
+		"$5 bill": {
+			"buy": {
+				"x": 938,
+				"y": 394
+			},
+			"use": {
+				"x": 828,
+				"y": 433
+			}
+		},
+		"big magnet": {
+			"buy": {
+				"x": 1017,
+				"y": 394
+			},
+			"use": {
+				"x": 913,
+				"y": 433
+			}
+		},
+		"$10 bill": {
+			"buy": {
+				"x": 1096,
+				"y": 394
+			},
+			"use": {
+				"x": 1000,
+				"y": 433
+			}
+		},
+		"hypno goggles": {
+			"buy": {
+				"x": 1175,
+				"y": 394
+			},
+			"use": {
+				"x": 1090,
+				"y": 433
+			}
+		},
+		"presentation": {
+			"buy": {
+				"x": 1254,
+				"y": 394
+			},
+			"use": {
+				"x": 1177,
+				"y": 433
+			}
+		},
+		"bike horn": {
+			"buy": {
+				"x": 780,
+				"y": 447
+			},
+			"use": {
+				"x": 650,
+				"y": 492
+			}
+		},
+		"whistle": {
+			"buy": {
+				"x": 859,
+				"y": 447
+			},
+			"use": {
+				"x": 739,
+				"y": 492
+			}
+		},
+		"bugle": {
+			"buy": {
+				"x": 938,
+				"y": 447
+			},
+			"use": {
+				"x": 828,
+				"y": 492
+			}
+		},
+		"aoogah": {
+			"buy": {
+				"x": 1017,
+				"y": 447
+			},
+			"use": {
+				"x": 913,
+				"y": 492
+			}
+		},
+		"elephant trunk": {
+			"buy": {
+				"x": 1096,
+				"y": 447
+			},
+			"use": {
+				"x": 1000,
+				"y": 492
+			}
+		},
+		"foghorn": {
+			"buy": {
+				"x": 1175,
+				"y": 447
+			},
+			"use": {
+				"x": 1090,
+				"y": 492
+			}
+		},
+		"opera singer": {
+			"buy": {
+				"x": 1254,
+				"y": 447
+			},
+			"use": {
+				"x": 1177,
+				"y": 492
+			}
+		},
+		"cupcake": {
+			"buy": {
+				"x": 780,
+				"y": 500
+			},
+			"use": {
+				"x": 650,
+				"y": 548
+			}
+		},
+		"fruit pie slice": {
+			"buy": {
+				"x": 859,
+				"y": 500
+			},
+			"use": {
+				"x": 739,
+				"y": 548
+			}
+		},
+		"cream pie slice": {
+			"buy": {
+				"x": 938,
+				"y": 500
+			},
+			"use": {
+				"x": 828,
+				"y": 548
+			}
+		},
+		"whole fruit pie": {
+			"buy": {
+				"x": 1017,
+				"y": 500
+			},
+			"use": {
+				"x": 913,
+				"y": 548
+			}
+		},
+		"whole cream pie": {
+			"buy": {
+				"x": 1096,
+				"y": 500
+			},
+			"use": {
+				"x": 1000,
+				"y": 548
+			}
+		},
+		"birthday cake": {
+			"buy": {
+				"x": 1175,
+				"y": 500
+			},
+			"use": {
+				"x": 1090,
+				"y": 548
+			}
+		},
+		"wedding cake": {
+			"buy": {
+				"x": 1254,
+				"y": 500
+			},
+			"use": {
+				"x": 1177,
+				"y": 548
+			}
+		},
+		"squirting flower": {
+			"buy": {
+				"x": 780,
+				"y": 553
+			},
+			"use": {
+				"x": 650,
+				"y": 608
+			}
+		},
+		"glass of water": {
+			"buy": {
+				"x": 859,
+				"y": 553
+			},
+			"use": {
+				"x": 739,
+				"y": 608
+			}
+		},
+		"squirt gun": {
+			"buy": {
+				"x": 938,
+				"y": 553
+			},
+			"use": {
+				"x": 828,
+				"y": 608
+			}
+		},
+		"seltzer bottle": {
+			"buy": {
+				"x": 1017,
+				"y": 553
+			},
+			"use": {
+				"x": 913,
+				"y": 608
+			}
+		},
+		"fire hose": {
+			"buy": {
+				"x": 1096,
+				"y": 553
+			},
+			"use": {
+				"x": 1000,
+				"y": 608
+			}
+		},
+		"storm cloud": {
+			"buy": {
+				"x": 1175,
+				"y": 553
+			},
+			"use": {
+				"x": 1090,
+				"y": 608
+			}
+		},
+		"geyser": {
+			"buy": {
+				"x": 1254,
+				"y": 553
+			},
+			"use": {
+				"x": 1177,
+				"y": 608
+			}
+		},
+		"flower pot": {
+			"buy": {
+				"x": 780,
+				"y": 606
+			},
+			"use": {
+				"x": 650,
+				"y": 664
+			}
+		},
+		"sand bag": {
+			"buy": {
+				"x": 859,
+				"y": 606
+			},
+			"use": {
+				"x": 739,
+				"y": 664
+			}
+		},
+		"anvil": {
+			"buy": {
+				"x": 938,
+				"y": 606
+			},
+			"use": {
+				"x": 828,
+				"y": 664
+			}
+		},
+		"big weight": {
+			"buy": {
+				"x": 1017,
+				"y": 606
+			},
+			"use": {
+				"x": 913,
+				"y": 664
+			}
+		},
+		"safe": {
+			"buy": {
+				"x": 1096,
+				"y": 606
+			},
+			"use": {
+				"x": 1000,
+				"y": 664
+			}
+		},
+		"grand piano": {
+			"buy": {
+				"x": 1175,
+				"y": 606
+			},
+			"use": {
+				"x": 1090,
+				"y": 675
+			}
+		},
+		"toontanic": {
+			"buy": {
+				"x": 1254,
+				"y": 606
+			},
+			"use": {
+				"x": 1177,
+				"y": 675
+			}
 		}
 	}
 
 	def controlMovement(args, size, message):
-		if(size > 0):
-			direction = args[0]
-			key = movement[args[0]]["key"]
-			if(size > 1):
+		direction = args[0]
+		if(size > 0 and direction in movement["inputs"]):
+			key = movement["inputs"][direction]["key"]
+			if(size == 2):
 				try:
-					t = float(msgSplit[1])
+					t = float(args[1])
 				except:
 					t = 0.0
 				if(t > 0):
 					newThread = threading.Thread(target = holdKey, args=(key, t))
 					newThread.start()
 					return
-			pyautogui.keyDown(key)
-			pyautogui.keUp(key)
-		else:
-			sendMessage(message)
+			elif(size == 1):
+				pyautogui.keyDown(key)
+				pyautogui.keyUp(key)
+				return
+		typeMessage(message)
 
 	def holdKey(key, seconds):
 		seconds = min(seconds, 30.0)
@@ -88,104 +579,46 @@ def gameControl():
 		time.sleep(seconds)
 		pyautogui.keyUp(key)
 
-	def walkForward():
-		pyautogui.keyDown('up')
-		pyautogui.keyUp('up')
+	def controlTurning(args, size, message):
+		if size > 1:
+			direction = args[1]
+			if(direction == "left" or direction == "right"):
+				controlMovement(args[1:], size - 1, message)
+				return
+		typeMessage(message)
 
-	def walkForwardFor(message):
-		msgSplit = message.split(" ")
-		if(len(msgSplit) == 2 and msgSplit[0] == "forward"):
+	def useGag(args, size, message):
+		if(size > 1):
+			gag = " ".join(args[1:])
+			if(gag in gags):
+				coordX = gags[gag]["use"]["x"]
+				coordY = gags[gag]["use"]["y"]
+				pyautogui.moveTo(coordX, coordY)
+				clickMouse()
+				return
+		typeMessage(message)
+
+	def buyGag(args, size, message):
+		if(size > 1):
 			try:
-				t = float(msgSplit[1])
+				x = int(args[size-1])
 			except:
-				t = 0.0
-			if(t <= 0):
-				walkForward()
+				x = -1
+			if(x >= 0):
+				gag = " ".join(args[1:(size-1)])
 			else:
-				newThread = threading.Thread(target = holdKey, args=('up', t))
-				newThread.start()
+				gag = " ".join(args[1:])
+				x = 1
+			if(gag in gags):
+				coordX = gags[gag]["buy"]["x"]
+				coordY = gags[gag]["buy"]["y"]
+				for i in range(x):
+					pyautogui.moveTo(coordX, coordY)
+					clickMouse()
+				return
+		typeMessage(message)
 
-	def walkBackward():
-		pyautogui.keyDown('down')
-		pyautogui.keyUp('down')
-
-	def walkBackwardFor(message):
-		msgSplit = message.split(" ")
-		if(len(msgSplit) == 2 and msgSplit[0] == "backward"):
-			try:
-				t = float(msgSplit[1])
-			except:
-				t = 0.0
-			if(t <= 0):
-				walkBackward()
-			else:
-				newThread = threading.Thread(target = holdKey, args=('down', t))
-				newThread.start()
-
-	def turnRight():
-		pyautogui.keyDown('right')
-		pyautogui.keyUp('right')
-
-	def turnRightFor(message):
-		msgSplit = message.split(" ")
-		if(len(msgSplit) == 2 and msgSplit[0] == "right"):
-			try:
-				t = float(msgSplit[1])
-			except:
-				t = 0.0
-			if(t <= 0):
-				turnRight()
-			else:
-				newThread = threading.Thread(target = holdKey, args=('right', t))
-				newThread.start()
-
-	def turnLeft():
-		pyautogui.keyDown('left')
-		pyautogui.keyUp('left')
-
-	def turnLeftFor(message):
-		msgSplit = message.split(" ")
-		if(len(msgSplit) == 2 and msgSplit[0] == "left"):
-			try:
-				t = float(msgSplit[1])
-			except:
-				t = 0.0
-			if(t <= 0):
-				turnLeft()
-			else:
-				newThread = threading.Thread(target = holdKey, args=('left', t))
-				newThread.start()
-
-	def isHoldFor(direction, message):
-		msgSplit = message.split(" ")
-		if(direction in message and len(msgSplit) == 2 and msgSplit[0] == direction):
-			try:
-				t = float(msgSplit[1])
-			except:
-				return False
-			return True
-		else:
-			return False
-
-	def jump():
-		pyautogui.keyDown('ctrl')
-		pyautogui.keyUp('ctrl')
-
-	def jumpFor(message):
-		msgSplit = message.split(" ")
-		if(len(msgSplit) == 2 and msgSplit[0] == "jump"):
-			try:
-				t = float(msgSplit[1])
-			except:
-				t = 0.0
-			if(t <= 0):
-				jump()
-			else:
-				newThread = threading.Thread(target = holdKey, args=('ctrl', t))
-				newThread.start()
-
-	def gags():
-		global inGags
+	def showGags():
 		if (inGags):
 			pyautogui.keyUp('home')
 			inGags = False
@@ -195,8 +628,7 @@ def gameControl():
 			pyautogui.keyDown('home')
 			inGags = True
 
-	def tasks():
-		global inTasks
+	def showTasks():
 		if (inTasks):
 			pyautogui.keyUp('end')
 			inTasks = False
@@ -207,7 +639,6 @@ def gameControl():
 			inTasks = True
 
 	def inUnsafeClickBounds():
-		global unsafeBounds
 		posx, posy = pyautogui.position()
 		for bound in unsafeBounds:
 			if (posx >= bound["xMin"] and
@@ -259,398 +690,6 @@ def gameControl():
 		pyautogui.typewrite(message, interval=0.01)
 		pyautogui.keyDown("enter")
 		pyautogui.keyUp("enter")
-
-	def feather():
-		pyautogui.moveTo(650, 316)
-		clickMouse()
-
-	def megaphone():
-		pyautogui.moveTo(739, 316)
-		clickMouse()
-
-	def lipstick():
-		pyautogui.moveTo(828, 316)
-		clickMouse()
-
-	def bambooCane():
-		pyautogui.moveTo(913, 316)
-		clickMouse()
-
-	def pixieDust():
-		pyautogui.moveTo(1000, 316)
-		clickMouse()
-
-	def jugglingBalls():
-		pyautogui.moveTo(1090, 316)
-		clickMouse()
-
-	def highDive():
-		pyautogui.moveTo(1177, 316)
-		clickMouse()
-
-	def bananaPeel():
-		pyautogui.moveTo(650, 375)
-		clickMouse()
-
-	def rake():
-		pyautogui.moveTo(739, 375)
-		clickMouse()
-
-	def marbles():
-		pyautogui.moveTo(828, 375)
-		clickMouse()
-
-	def quicksand():
-		pyautogui.moveTo(913, 375)
-		clickMouse()
-
-	def trapdoor():
-		pyautogui.moveTo(1000, 375)
-		clickMouse()
-
-	def tnt():
-		pyautogui.moveTo(1090, 375)
-		clickMouse()
-
-	def railroad():
-		pyautogui.moveTo(1177, 375)
-		clickMouse()
-
-	def oneBill():
-		pyautogui.moveTo(650, 433)
-		clickMouse()
-
-	def smallMagnet():
-		pyautogui.moveTo(739, 433)
-		clickMouse()
-
-	def fiveBill():
-		pyautogui.moveTo(828, 433)
-		clickMouse()
-
-	def bigMagnet():
-		pyautogui.moveTo(913, 433)
-		clickMouse()
-
-	def Tenbill():
-		pyautogui.moveTo(1000, 433)
-		clickMouse()
-
-	def hypnoGoggles():
-		pyautogui.moveTo(1090, 433)
-		clickMouse()
-
-	def presentation():
-		pyautogui.moveTo(1177, 433)
-		clickMouse()
-
-	def bikeHorn():
-		pyautogui.moveTo(650, 492)
-		clickMouse()
-
-	def whistle():
-		pyautogui.moveTo(739, 492)
-		clickMouse()
-
-	def bugle():
-		pyautogui.moveTo(828, 492)
-		clickMouse()
-
-	def aoogah():
-		pyautogui.moveTo(913, 492)
-		clickMouse()
-
-	def elephantTrunk():
-		pyautogui.moveTo(1000, 492)
-		clickMouse()
-
-	def foghorn():
-		pyautogui.moveTo(1090, 492)
-		clickMouse()
-
-	def operaSinger():
-		pyautogui.moveTo(1177, 492)
-		clickMouse()
-
-	def cupcake():
-		pyautogui.moveTo(650, 548)
-		clickMouse()
-
-	def fruitPieSlice():
-		pyautogui.moveTo(739, 548)
-		clickMouse()
-
-	def creamPieSlice():
-		pyautogui.moveTo(828, 548)
-		clickMouse()
-
-	def wholeFruitPie():
-		pyautogui.moveTo(913, 548)
-		clickMouse()
-
-	def wholeCreamPie():
-		pyautogui.moveTo(1000, 548)
-		clickMouse()
-
-	def birthdayCake():
-		pyautogui.moveTo(1090, 548)
-		clickMouse()
-
-	def weddingCake():
-		pyautogui.moveTo(1177, 548)
-		clickMouse()
-
-	def squirtingFlower():
-		pyautogui.moveTo(650, 608)
-		clickMouse()
-
-	def glassOfWater():
-		pyautogui.moveTo(739, 608)
-		clickMouse()
-
-	def squirtGun():
-		pyautogui.moveTo(28, 608)
-		clickMouse()
-
-	def seltzerBottle():
-		pyautogui.moveTo(913, 608)
-		clickMouse()
-
-	def fireHose():
-		pyautogui.moveTo(1000, 608)
-		clickMouse()
-
-	def stormCloud():
-		pyautogui.moveTo(1090, 608)
-		clickMouse()
-
-	def geyser():
-		pyautogui.moveTo(1177, 608)
-		clickMouse()
-
-	def flowerPot():
-		pyautogui.moveTo(650, 664)
-		clickMouse()
-
-	def sandbag():
-		pyautogui.moveTo(739, 664)
-		clickMouse()
-
-	def anvil():
-		pyautogui.moveTo(828, 664)
-		clickMouse()
-
-	def bigWeight():
-		pyautogui.moveTo(913, 664)
-		clickMouse()
-
-	def safe():
-		pyautogui.moveTo(1000, 664)
-		clickMouse()
-
-	def grandPiano():
-		pyautogui.moveTo(1090, 675)
-		clickMouse()
-
-	def toontanic():
-		pyautogui.moveTo(1177, 675)
-		clickMouse()
-
-	def buyFeather():
-		pyautogui.moveTo(780, 288)
-		clickMouse()
-
-	def buyMegaphone():
-		pyautogui.moveTo(859, 288)
-		clickMouse()
-
-	def buyLipstick():
-		pyautogui.moveTo(938, 288)
-		clickMouse()
-
-	def buyBambooCane():
-		pyautogui.moveTo(1017, 288)
-		clickMouse()
-
-	def buyPixieDust():
-		pyautogui.moveTo(1096, 288)
-		clickMouse()
-
-	def buyJugglingBalls():
-		pyautogui.moveTo(1175, 288)
-		clickMouse()
-
-	def buyHighDive():
-		pyautogui.moveTo(1254, 288)
-		clickMouse()
-
-	def buyBananaPeel():
-		pyautogui.moveTo(780, 341)
-		clickMouse()
-
-	def buyRake():
-		pyautogui.moveTo(859, 341)
-		clickMouse()
-
-	def buyMarbles():
-		pyautogui.moveTo(938, 341)
-		clickMouse()
-
-	def buyQuicksand():
-		pyautogui.moveTo(1017, 341)
-		clickMouse()
-
-	def buyTrapdoor():
-		pyautogui.moveTo(1096, 341)
-		clickMouse()
-
-	def buyTnt():
-		pyautogui.moveTo(1175, 341)
-		clickMouse()
-
-	def buyRailroad():
-		pyautogui.moveTo(1254, 341)
-		clickMouse()
-
-	def buyOneBill():
-		pyautogui.moveTo(780, 394)
-		clickMouse()
-
-	def buySmallMagnet():
-		pyautogui.moveTo(859, 394)
-		clickMouse()
-
-	def buyFiveBill():
-		pyautogui.moveTo(938, 394)
-		clickMouse()
-
-	def buyBigMagnet():
-		pyautogui.moveTo(1017, 394)
-		clickMouse()
-
-	def buyTenbill():
-		pyautogui.moveTo(1096, 394)
-		clickMouse()
-
-	def buyHypnoGoggles():
-		pyautogui.moveTo(1175, 394)
-		clickMouse()
-
-	def buyPresentation():
-		pyautogui.moveTo(1254, 394)
-		clickMouse()
-
-	def buyBikeHorn():
-		pyautogui.moveTo(780, 447)
-		clickMouse()
-
-	def buyWhistle():
-		pyautogui.moveTo(859, 447)
-		clickMouse()
-
-	def buyBugle():
-		pyautogui.moveTo(938, 447)
-		clickMouse()
-
-	def buyAoogah():
-		pyautogui.moveTo(1017, 447)
-		clickMouse()
-
-	def buyElephantTrunk():
-		pyautogui.moveTo(1096, 447)
-		clickMouse()
-
-	def buyFoghorn():
-		pyautogui.moveTo(1175, 447)
-		clickMouse()
-
-	def buyOperaSinger():
-		pyautogui.moveTo(1254, 447)
-		clickMouse()
-
-	def buyCupcake():
-		pyautogui.moveTo(780, 500)
-		clickMouse()
-
-	def buyFruitPieSlice():
-		pyautogui.moveTo(859, 500)
-		clickMouse()
-
-	def buyCreamPieSlice():
-		pyautogui.moveTo(938, 500)
-		clickMouse()
-
-	def buyWholeFruitPie():
-		pyautogui.moveTo(1017, 500)
-		clickMouse()
-
-	def buyWholeCreamPie():
-		pyautogui.moveTo(1096, 500)
-		clickMouse()
-
-	def buyBirthdayCake():
-		pyautogui.moveTo(1175, 500)
-		clickMouse()
-
-	def buyWeddingCake():
-		pyautogui.moveTo(1254, 500)
-		clickMouse()
-
-	def buySquirtingFlower():
-		pyautogui.moveTo(780, 553)
-		clickMouse()
-
-	def buyGlassOfWater():
-		pyautogui.moveTo(859, 553)
-		clickMouse()
-
-	def buySquirtGun():
-		pyautogui.moveTo(938, 553)
-		clickMouse()
-
-	def buySeltzerBottle():
-		pyautogui.moveTo(1017, 553)
-		clickMouse()
-
-	def buyFireHose():
-		pyautogui.moveTo(1096, 553)
-		clickMouse()
-
-	def buyStormCloud():
-		pyautogui.moveTo(1175, 553)
-		clickMouse()
-
-	def buyGeyser():
-		pyautogui.moveTo(1254, 553)
-		clickMouse()
-
-	def buyFlowerPot():
-		pyautogui.moveTo(780, 606)
-		clickMouse()
-
-	def buySandbag():
-		pyautogui.moveTo(859, 606)
-		clickMouse()
-
-	def buyAnvil():
-		pyautogui.moveTo(938, 606)
-		clickMouse()
-
-	def buyBigWeight():
-		pyautogui.moveTo(1017, 606)
-		clickMouse()
-
-	def buySafe():
-		pyautogui.moveTo(1096, 606)
-		clickMouse()
-
-	def buyGrandPiano():
-		pyautogui.moveTo(1175, 606)
-		clickMouse()
-
-	def buyToontanic():
-		pyautogui.moveTo(1254, 606)
-		clickMouse()
 
 	def doneShopping():
 		pyautogui.moveTo(1454, 582)
@@ -847,33 +886,24 @@ def gameControl():
 			msg = messageList.pop(0)
 			user = msg["user"]
 			message = msg["message"].lower()
+			args = message.split(" ")
+			argsLength = len(args)
+			command = args[0]
 
 			print("reading " + message)
 
-			if message == "forward":
-				walkForward()
-			elif isHoldFor("forward", message):
-				walkForwardFor(message)
-			elif message == "backward":
-				walkBackward()
-			elif isHoldFor("backward", message):
-				walkBackwardFor(message)
-			elif message == "right":
-				turnRight()
-			elif isHoldFor("right", message):
-				turnRightFor(message)
-			elif message == "left":
-				turnLeft()
-			elif isHoldFor("left", message):
-				turnLeftFor(message)
-			elif message == "jump":
-				jump()
-			elif isHoldFor("jump", message):
-				jumpFor(message)
+			if(command in movement["inputs"]):
+				controlMovement(args, argsLength, message)
+			elif(command == "turn"):
+				controlTurning(args, argsLength, message)
+			elif(command == "use"):
+				useGag(args, argsLength, message)
+			elif(command == "buy"):
+				buyGag(args, argsLength, message)
 			elif message == "gags":
-				gags()
+				showGags()
 			elif message == "tasks":
-				tasks()
+				showTasks()
 			elif message == "map":
 				map()
 			elif message == "friends":
@@ -882,202 +912,6 @@ def gameControl():
 				book()
 			elif message == "delete":
 				delete()
-			elif message == "use feather":
-				feather()
-			elif message == "use megaphone":
-				megaphone()
-			elif message == "use lipstick":
-				lipstick()
-			elif message == "use bamboo cane":
-				bambooCane()
-			elif message == "use pixie dust":
-				pixieDust()
-			elif message == "use juggling balls":
-				jugglingBalls()
-			elif message == "use high dive":
-				highDive()
-			elif message == "use banana peel":
-				bananaPeel()
-			elif message == "use rake":
-				rake()
-			elif message == "use marbles":
-				marbles()
-			elif message == "use quicksand":
-				quicksand()
-			elif message == "use trapdoor":
-				trapdoor()
-			elif message == "use tnt":
-				tnt()
-			elif message == "use railroad":
-				railroad()
-			elif message == "use $1 bill":
-				oneBill()
-			elif message == "use small magnet":
-				smallMagnet()
-			elif message == "use $5 bill":
-				fiveBill()
-			elif message == "use big magnet":
-				bigMagnet()
-			elif message == "use $10 bill":
-				Tenbill()
-			elif message == "use hypno goggles":
-				hypnoGoggles()
-			elif message == "use presentation":
-				presentation()
-			elif message == "use bike horn":
-				bikeHorn()
-			elif message == "use whistle":
-				whistle()
-			elif message == "use bugle":
-				bugle()
-			elif message == "use aoogah":
-				aoogah()
-			elif message == "use elephant trunk":
-				elephantTrunk()
-			elif message == "use foghorn":
-				foghorn()
-			elif message == "use opera singer":
-				operaSinger()
-			elif message == "use cupcake":
-				cupcake()
-			elif message == "use fruit pie slice":
-				fruitPieSlice()
-			elif message == "use cream pie slice":
-				creamPieSlice()
-			elif message == "use whole fruit pie":
-				wholeFruitPie()
-			elif message == "use whole cream pie":
-				wholeCreamPie()
-			elif message == "use birthday cake":
-				birthdayCake()
-			elif message == "use wedding cake":
-				weddingCake()
-			elif message == "use squirting flower":
-				squirtingFlower()
-			elif message == "use glass of water":
-				glassOfWater()
-			elif message == "use squirt gun":
-				squirtGun()
-			elif message == "use seltzer bottle":
-				seltzerBottle()
-			elif message == "use fire hose":
-				fireHose()
-			elif message == "use storm cloud":
-				stormCloud()
-			elif message == "use geyser":
-				geyser()
-			elif message == "use flower pot":
-				flowerPot()
-			elif message == "use sandbag":
-				sandbag()
-			elif message == "use anvil":
-				anvil()
-			elif message == "use big weight":
-				bigWeight()
-			elif message == "use safe":
-				safe()
-			elif message == "use grand piano":
-				grandPiano()
-			elif message == "use toontanic":
-				toontanic()
-			elif message == "buy feather":
-				buyFeather()
-			elif message == "buy megaphone":
-				buyMegaphone()
-			elif message == "buy lipstick":
-				buyLipstick()
-			elif message == "buy bamboo cane":
-				buyBambooCane()
-			elif message == "buy pixie dust":
-				buyPixieDust()
-			elif message == "buy juggling balls":
-				buyJugglingBalls()
-			elif message == "buy high dive":
-				buyHighDive()
-			elif message == "buy banana peel":
-				buyBananaPeel()
-			elif message == "buy rake":
-				buyRake()
-			elif message == "buy marbles":
-				buyMarbles()
-			elif message == "buy quicksand":
-				buyQuicksand()
-			elif message == "buy trapdoor":
-				buyTrapdoor()
-			elif message == "buy tnt":
-				buyTnt()
-			elif message == "buy railroad":
-				buyRailroad()
-			elif message == "buy $1 bill":
-				buyOneBill()
-			elif message == "buy small magnet":
-				buySmallMagnet()
-			elif message == "buy $5 bill":
-				buyFiveBill()
-			elif message == "buy big magnet":
-				buyBigMagnet()
-			elif message == "buy $10 bill":
-				buyTenbill()
-			elif message == "buy hypno goggles":
-				buyHypnoGoggles()
-			elif message == "buy presentation":
-				buyPresentation()
-			elif message == "buy bike horn":
-				buyBikeHorn()
-			elif message == "buy whistle":
-				buyWhistle()
-			elif message == "buy bugle":
-				buyBugle()
-			elif message == "buy aoogah":
-				buyAoogah()
-			elif message == "buy elephant trunk":
-				buyElephantTrunk()
-			elif message == "buy foghorn":
-				buyFoghorn()
-			elif message == "buy opera singer":
-				buyOperaSinger()
-			elif message == "buy cupcake":
-				buyCupcake()
-			elif message == "buy fruit pie slice":
-				buyFruitPieSlice()
-			elif message == "buy cream pie slice":
-				buyCreamPieSlice()
-			elif message == "buy whole fruit pie":
-				buyWholeFruitPie()
-			elif message == "buy whole cream pie":
-				buyWholeCreamPie()
-			elif message == "buy birthday cake":
-				buyBirthdayCake()
-			elif message == "buy wedding cake":
-				buyWeddingCake()
-			elif message == "buy squirting flower":
-				buySquirtingFlower()
-			elif message == "buy glass of water":
-				buyGlassOfWater()
-			elif message == "buy squirt gun":
-				buySquirtGun()
-			elif message == "buy seltzer bottle":
-				buySeltzerBottle()
-			elif message == "buy fire hose":
-				buyFireHose()
-			elif message == "buy storm cloud":
-				buyStormCloud()
-			elif message == "buy geyser":
-				buyGeyser()
-			elif message == "buy flower pot":
-				buyFlowerPot()
-			elif message == "buy sandbag":
-				buySandbag()
-			elif message == "buy anvil":
-				buyAnvil()
-			elif message == "buy big weight":
-				buyBigWeight()
-			elif message == "buy safe":
-				buySafe()
-			elif message == "buy grand piano":
-				buyGrandPiano()
-			elif message == "buy toontanic":
-				buyToontanic()
 			elif message == "done shopping":
 				doneShopping()
 			elif message == "delete gag":
