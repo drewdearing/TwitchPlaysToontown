@@ -118,7 +118,7 @@ def gameControl():
 			inGags = False
 		else:
 			if(inTasks):
-				tasks()
+				showTasks()
 			pyautogui.keyDown('home')
 			inGags = True
 
@@ -130,7 +130,7 @@ def gameControl():
 			inTasks = False
 		else:
 			if(inGags):
-				gags()
+				showGags()
 			pyautogui.keyDown('end')
 			inTasks = True
 
