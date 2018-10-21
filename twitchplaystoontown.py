@@ -142,18 +142,28 @@ def gameControl():
 		return False
 
 	def controlMouse(args, size, message):
+		if(size == 3):
+			try:
+				x = min(int(args[1]), 1919)
+				y = min(int(args[2]), 1079)
+			except:
+				x = -1
+				y = -1
+			if(x > 0 and y > 0):
+				pyautogui.moveTo(x, y)
+				return
 		if(size > 1):
 			direction = " ".join(args[1:])
 			if(direction == "click"):
-				pyautogui.clickMouse()
+				clickMouse()
 				return
-			if(direction == "hold"):
-				pyautogui.mouseDown()
+			elif(direction == "hold"):
+				mouseDown()
 				return
-			if(direction == "release"):
-				pyautogui.mouseUp()
+			elif(direction == "release"):
+				mouseUp()
 				return
-			elif(direction in mouseDirections):
+			elif(direction in mouseDirections["inputs"]):
 				speed = mouseDirections["speed"]
 				mouseDirX = speed * mouseDirections["inputs"][direction]["x"]
 				mouseDirY = speed * mouseDirections["inputs"][direction]["y"]
@@ -162,6 +172,8 @@ def gameControl():
 				if(mouseDirY == 0):
 					mouseDirY = None
 				pyautogui.moveRel(mouseDirX, mouseDirY)
+				posx, posy = pyautogui.position()
+				print(str(posx)+", "+str(posy))
 				return
 		typeMessage(message)
 
