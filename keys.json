@@ -17,6 +17,9 @@
 		},
 		"delete": {
 			"key": "del"
+		},
+		"screenshot": {
+			"key": "f9"
 		}
 	}
 }

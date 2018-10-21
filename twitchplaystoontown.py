@@ -154,22 +154,6 @@ def gameControl():
 		pyautogui.moveTo(location['x'], location['y'])
 		clickMouse()
 
-	def moveMouseUp():
-		pyautogui.moveRel(None, -1)
-		print(pyautogui.position())
-
-	def moveMouseDown():
-		pyautogui.moveRel(None, 1)
-		print(pyautogui.position())
-
-	def moveMouseRight():
-		pyautogui.moveRel(1, None)
-		print(pyautogui.position())
-
-	def moveMouseLeft():
-		pyautogui.moveRel(-1, None)
-		print(pyautogui.position())
-
 	def typeMessage(message):
 		pyautogui.typewrite(message, interval=0.01)
 		pyautogui.keyDown("enter")
