@@ -216,6 +216,22 @@
 			"x": 1455,
 			"y": 270
 		},
+		"toontask choose 1": {
+			"x": 418,
+			"y": 65
+		},
+		"toontask choose 2": {
+			"x": 418,
+			"y": 350
+		},
+		"toontask choose 3": {
+			"x": 418,
+			"y": 634
+		},
+		"toontask cancel": {
+			"x": 350,
+			"y": 977
+		},
 		"target far left": {
 			"x": 646,
 			"y": 424
