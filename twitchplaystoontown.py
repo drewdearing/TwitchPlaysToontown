@@ -44,6 +44,9 @@ def gameControl():
 	with open('mouseLocations.json') as f:
 		mouseLocations = json.load(f)
 
+	with open('mouse.json') as f:
+		mouseDirections = json.load(f)
+
 	def holdKey(key, seconds):
 		seconds = min(seconds, 30.0)
 		pyautogui.keyDown(key)
@@ -138,11 +141,44 @@ def gameControl():
 				return True
 		return False
 
-	def clickMouse():
+	def controlMouse(args, size, message):
+		if(size > 1):
+			direction = " ".join(args[1:])
+			if(direction == "click"):
+				pyautogui.clickMouse()
+				return
+			if(direction == "hold"):
+				pyautogui.mouseDown()
+				return
+			if(direction == "release"):
+				pyautogui.mouseUp()
+				return
+			elif(direction in mouseDirections):
+				speed = mouseDirections["speed"]
+				mouseDirX = speed * mouseDirections["inputs"][direction]["x"]
+				mouseDirY = speed * mouseDirections["inputs"][direction]["y"]
+				if(mouseDirX == 0):
+					mouseDirX = None
+				if(mouseDirY == 0):
+					mouseDirY = None
+				pyautogui.moveRel(mouseDirX, mouseDirY)
+				return
+		typeMessage(message)
+
+	def mouseDown():
 		if(inUnsafeClickBounds()):
 			print("WARNING: unsafe click detected")
+			return False
 		else:
-			pyautogui.click()
+			pyautogui.mouseDown();
+			return True
+
+	def mouseUp():
+		pyautogui.mouseUp();
+
+	def clickMouse():
+		if(mouseDown()):
+			mouseUp()
 
 	def keyPress(message):
 		key = keys["inputs"][message]["key"]
@@ -180,6 +216,8 @@ def gameControl():
 				useGag(args, argsLength, message)
 			elif(command == "buy"):
 				buyGag(args, argsLength, message)
+			elif(command == "mouse"):
+				controlMouse(args, argsLength, message)
 			elif message == "show gags":
 				showGags()
 			elif message == "show tasks":

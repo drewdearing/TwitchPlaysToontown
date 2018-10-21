@@ -176,6 +176,18 @@
 			"x": 1744,
 			"y": 276
 		},
+		"toon details": {
+			"x": 1258,
+			"y": 467
+		},
+		"toon details close": {
+			"x": 1725,
+			"y": 467
+		},
+		"toon doodle": {
+			"x": 1818,
+			"y": 460
+		},
 		"toon close": {
 			"x": 1886,
 			"y": 459
@@ -203,6 +215,226 @@
 		"dont switch": {
 			"x": 1455,
 			"y": 270
+		},
+		"target far left": {
+			"x": 646,
+			"y": 424
+		},
+		"target left": {
+			"x": 750,
+			"y": 424
+		},
+		"target middle left": {
+			"x": 860,
+			"y": 424
+		},
+		"target middle": {
+			"x": 968,
+			"y": 424
+		},
+		"target middle right": {
+			"x": 1075,
+			"y": 424
+		},
+		"target right": {
+			"x": 1185,
+			"y": 424
+		},
+		"target far right": {
+			"x": 1290,
+			"y": 424
+		},
+		"battle back": {
+			"x": 618,
+			"y": 537
+		},
+		"battle pass": {
+			"x": 1427,
+			"y": 606
+		},
+		"battle run": {
+			"x": 1316,
+			"y": 681
+		},
+		"creator choose boy": {
+			"x": 747,
+			"y": 970
+		},
+		"creator choose girl": {
+			"x": 1177,
+			"y": 970
+		},
+		"creator next": {
+			"x": 1596,
+			"y": 1013
+		},
+		"creator back": {
+			"x": 1410,
+			"y": 1014
+		},
+		"creator species back": {
+			"x": 1351,
+			"y": 359
+		},
+		"creator species next": {
+			"x": 1628,
+			"y": 359
+		},
+		"creator toon color back": {
+			"x": 1351,
+			"y": 359
+		},
+		"creator toon color next": {
+			"x": 1628,
+			"y": 359
+		},
+		"creator shirt back": {
+			"x": 1351,
+			"y": 359
+		},
+		"creator shirt next": {
+			"x": 1628,
+			"y": 359
+		},
+		"creator head back": {
+			"x": 1390,
+			"y": 476
+		},
+		"creator head next": {
+			"x": 1585,
+			"y": 481
+		},
+		"creator body back": {
+			"x": 1393,
+			"y": 590
+		},
+		"creator body next": {
+			"x": 1585,
+			"y": 582
+		},
+		"creator legs back": {
+			"x": 1393,
+			"y": 690
+		},
+		"creator legs next": {
+			"x": 1585,
+			"y": 697
+		},
+		"creator shuffle": {
+			"x": 1492,
+			"y": 852
+		},
+		"creator bottoms back": {
+			"x": 1351,
+			"y": 615
+		},
+		"creator bottoms next": {
+			"x": 1627,
+			"y": 615
+		},
+		"creator shirt color back": {
+			"x": 1390,
+			"y": 476
+		},
+		"creator shirt color next": {
+			"x": 1585,
+			"y": 481
+		},
+		"creator bottoms color back": {
+			"x": 1393,
+			"y": 730
+		},
+		"creator bottoms color next": {
+			"x": 1586,
+			"y": 741
+		},
+		"creator done": {
+			"x": 1594,
+			"y": 1019
+		},
+		"creator toggle title": {
+			"x": 355,
+			"y": 419
+		},
+		"creator toggle first": {
+			"x": 570,
+			"y": 419
+		},
+		"creator toggle last": {
+			"x": 899,
+			"y": 419
+		},
+		"creator shuffle name": {
+			"x": 739,
+			"y": 756
+		},
+		"creator submit name": {
+			"x": 739,
+			"y": 756
+		},
+		"creator type-a-name": {
+			"x": 732,
+			"y": 834
+		},
+		"creator pick-a-name": {
+			"x": 732,
+			"y": 834
+		},
+		"creator title up": {
+			"x": 416,
+			"y": 454
+		},
+		"creator title down": {
+			"x": 416,
+			"y": 686
+		},
+		"creator first up": {
+			"x": 630,
+			"y": 454
+		},
+		"creator first down": {
+			"x": 630,
+			"y": 686
+		},
+		"creator last prefix up": {
+			"x": 851,
+			"y": 454
+		},
+		"creator last prefix down": {
+			"x": 851,
+			"y": 686
+		},
+		"creator last 1 up": {
+			"x": 851,
+			"y": 454
+		},
+		"creator last 1 down": {
+			"x": 851,
+			"y": 686
+		},
+		"creator last stem up": {
+			"x": 1038,
+			"y": 454
+		},
+		"creator last stem down": {
+			"x": 1038,
+			"y": 686
+		},
+		"creator last 2 up": {
+			"x": 1038,
+			"y": 454
+		},
+		"creator last 2 down": {
+			"x": 1038,
+			"y": 686
+		},
+		"creator enter toontorial": {
+			"x": 813,
+			"y": 716
+		},
+		"creator skip toontorial": {
+			"x": 1108,
+			"y": 716
 		}
 	}
 }
