@@ -245,6 +245,7 @@ def gameControl():
 				messageList.append({"user": "itspeachtea", "message": "jump"})
 
 def twitch():
+
 	def joinchat():
 		Loading = True
 		while Loading:
@@ -298,6 +299,9 @@ def twitch():
 			else:
 				msg = getMessageDict(line)
 				print(msg["user"] +": " +msg["message"])
+				chatlog = open("chatlog.txt","a")
+				chatlog.write(msg["user"] +": " +msg["message"]+"\n")
+				chatlog.close()
 				messageList.append(msg)
 
 if __name__ == '__main__':
