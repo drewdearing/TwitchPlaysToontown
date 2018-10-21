@@ -13,6 +13,8 @@ CHANNEL = "itspeachtea"
 OWNER = "itspeachtea"
 
 messageList = []
+inTasks = False
+inGags = False
 
 irc = socket.socket()
 irc.connect((SERVER, PORT))
@@ -23,9 +25,6 @@ irc.send((
 	).encode())
 
 def gameControl():
-
-	inGags = False
-	inTasks = False
 	monitorSize = pyautogui.size()
 	sinceLastInput = time.time()
 
@@ -112,6 +111,8 @@ def gameControl():
 		typeMessage(message)
 
 	def showGags():
+		global inGags
+		global inTasks
 		if (inGags):
 			pyautogui.keyUp('home')
 			inGags = False
@@ -122,6 +123,8 @@ def gameControl():
 			inGags = True
 
 	def showTasks():
+		global inGags
+		global inTasks
 		if (inTasks):
 			pyautogui.keyUp('end')
 			inTasks = False
