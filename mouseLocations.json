@@ -1,0 +1,208 @@
+{
+	"inputs":{
+		"done shopping": {
+			"x": 1454,
+			"y": 582
+		},
+		"delete gag": {
+			"x": 709,
+			"y": 705
+		},
+		"blam canyon": {
+			"x": 584,
+			"y": 294
+		},
+		"boingbury": {
+			"x": 584,
+			"y": 334
+		},
+		"bounceboro": {
+			"x": 584,
+			"y": 369
+		},
+		"fizzlefield": {
+			"x": 584,
+			"y": 401
+		},
+		"gulp gulch": {
+			"x": 584,
+			"y": 439
+		},
+		"hiccup hills": {
+			"x": 584,
+			"y": 473
+		},
+		"kaboom cliffs": {
+			"x": 584,
+			"y": 512
+		},
+		"splashport": {
+			"x": 584,
+			"y": 543
+		},
+		"splat summit": {
+			"x": 584,
+			"y": 576
+		},
+		"thwackville": {
+			"x": 584,
+			"y": 615
+		},
+		"whoosh rapids": {
+			"x": 584,
+			"y": 647
+		},
+		"zoink falls": {
+			"x": 584,
+			"y": 685
+		},
+		"welcome valley": {
+			"x": 584,
+			"y": 720
+		},
+		"teleport here": {
+			"x": 1184,
+			"y": 745
+		},
+		"go home": {
+			"x": 1033,
+			"y": 835
+		},
+		"back to playground": {
+			"x": 1133,
+			"y": 853
+		},
+		"goofy speedway": {
+			"x": 650,
+			"y": 442
+		},
+		"toontown central": {
+			"x": 960,
+			"y": 496
+		},
+		"donalds dreamland": {
+			"x": 916,
+			"y": 212
+		},
+		"the brrrgh": {
+			"x": 1224,
+			"y": 310
+		},
+		"daisy gardens": {
+			"x": 798,
+			"y": 682
+		},
+		"minnies melodyland": {
+			"x": 999,
+			"y": 356
+		},
+		"donalds dock": {
+			"x": 1259,
+			"y": 488
+		},
+		"chip n dales": {
+			"x": 1068,
+			"y": 661
+		},
+		"close friends": {
+			"x": 1800,
+			"y": 453
+		},
+		"friends up": {
+			"x": 1800,
+			"y": 186
+		},
+		"friends down": {
+			"x": 1800,
+			"y": 414
+		},
+		"friends next": {
+			"x": 1881,
+			"y": 453
+		},
+		"friends back": {
+			"x": 1720,
+			"y": 453
+		},
+		"friends 1": {
+			"x": 1720,
+			"y": 212
+		},
+		"friends 2": {
+			"x": 1720,
+			"y": 235
+		},
+		"friends 3": {
+			"x": 1720,
+			"y": 260
+		},
+		"friends 4": {
+			"x": 1720,
+			"y": 284
+		},
+		"friends 5": {
+			"x": 1720,
+			"y": 311
+		},
+		"friends 6": {
+			"x": 1720,
+			"y": 335
+		},
+		"friends 7": {
+			"x": 1720,
+			"y": 359
+		},
+		"friends 8": {
+			"x": 1720,
+			"y": 383
+		},
+		"toon friends": {
+			"x": 1744,
+			"y": 181
+		},
+		"toon go to": {
+			"x": 1744,
+			"y": 230
+		},
+		"toon goto": {
+			"x": 1744,
+			"y": 230
+		},
+		"toon tp": {
+			"x": 1744,
+			"y": 230
+		},
+		"toon whisper": {
+			"x": 1744,
+			"y": 276
+		},
+		"toon close": {
+			"x": 1886,
+			"y": 459
+		},
+		"accept request": {
+			"x": 1158,
+			"y": 200
+		},
+		"reject request": {
+			"x": 1248,
+			"y": 200
+		},
+		"switch district": {
+			"x": 1293,
+			"y": 270
+		},
+		"switch": {
+			"x": 1293,
+			"y": 270
+		},
+		"dont switch district": {
+			"x": 1455,
+			"y": 270
+		},
+		"dont switch": {
+			"x": 1455,
+			"y": 270
+		}
+	}
+}

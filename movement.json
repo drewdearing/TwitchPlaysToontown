@@ -1,0 +1,19 @@
+{
+	"inputs":{
+		"up": {
+			"key": "up"
+		},
+		"back": {
+			"key": "down"
+		},
+		"right": {
+			"key": "right"
+		},
+		"left": {
+			"key": "left"
+		},
+		"jump": {
+			"key": "ctrl"
+		}
+	}
+}

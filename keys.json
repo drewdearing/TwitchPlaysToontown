@@ -1,0 +1,22 @@
+{
+	"inputs":{
+		"open map": {
+			"key": "alt"
+		},
+		"close map": {
+			"key": "alt"
+		},
+		"open friends": {
+			"key": "f7"
+		},
+		"open book": {
+			"key": "f8"
+		},
+		"close book": {
+			"key": "f8"
+		},
+		"delete": {
+			"key": "del"
+		}
+	}
+}
