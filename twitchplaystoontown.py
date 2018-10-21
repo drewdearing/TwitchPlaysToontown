@@ -64,20 +64,20 @@ def gameControl():
 				if(t > 0):
 					newThread = threading.Thread(target = holdKey, args=(key, t))
 					newThread.start()
-					return
+					return True
 			elif(size == 1):
 				pyautogui.keyDown(key)
 				pyautogui.keyUp(key)
-				return
-		typeMessage(message)
+				return True
+		return False
 
 	def controlTurning(args, size, message):
 		if size > 1:
 			direction = args[1]
 			if(direction == "left" or direction == "right"):
 				controlMovement(args[1:], size - 1, message)
-				return
-		typeMessage(message)
+				return True
+		return False
 
 	def useGag(args, size, message):
 		if(size > 1):
@@ -87,8 +87,8 @@ def gameControl():
 				coordY = gags[gag]["use"]["y"]
 				pyautogui.moveTo(coordX, coordY)
 				clickMouse()
-				return
-		typeMessage(message)
+				return True
+		return False
 
 	def buyGag(args, size, message):
 		if(size > 1):
@@ -107,8 +107,8 @@ def gameControl():
 				for i in range(x):
 					pyautogui.moveTo(coordX, coordY)
 					clickMouse()
-				return
-		typeMessage(message)
+				return True
+		return False
 
 	def showGags():
 		global inGags
@@ -154,18 +154,18 @@ def gameControl():
 				y = -1
 			if(x > 0 and y > 0):
 				pyautogui.moveTo(x, y)
-				return
+				return True
 		if(size > 1):
 			direction = " ".join(args[1:])
 			if(direction == "click"):
 				clickMouse()
-				return
+				return True
 			elif(direction == "hold"):
 				mouseDown()
-				return
+				return True
 			elif(direction == "release"):
 				mouseUp()
-				return
+				return True
 			elif(direction in mouseDirections["inputs"]):
 				speed = mouseDirections["speed"]
 				mouseDirX = speed * mouseDirections["inputs"][direction]["x"]
@@ -177,8 +177,8 @@ def gameControl():
 				pyautogui.moveRel(mouseDirX, mouseDirY)
 				posx, posy = pyautogui.position()
 				print(str(posx)+", "+str(posy))
-				return
-		typeMessage(message)
+				return True
+		return False
 
 	def mouseDown():
 		if(inUnsafeClickBounds()):
@@ -223,16 +223,16 @@ def gameControl():
 
 			print("reading " + message)
 
-			if(command in movement["inputs"]):
-				controlMovement(args, argsLength, message)
-			elif(command == "turn"):
-				controlTurning(args, argsLength, message)
-			elif(command == "use"):
-				useGag(args, argsLength, message)
-			elif(command == "buy"):
-				buyGag(args, argsLength, message)
-			elif(command == "mouse"):
-				controlMouse(args, argsLength, message)
+			if(command in movement["inputs"] and controlMovement(args, argsLength, message)):
+				continue
+			elif(command == "turn" and controlTurning(args, argsLength, message)):
+				continue
+			elif(command == "use" and useGag(args, argsLength, message)):
+				continue
+			elif(command == "buy" and buyGag(args, argsLength, message)):
+				continue
+			elif(command == "mouse" and controlMouse(args, argsLength, message)):
+				continue
 			elif message == "show gags":
 				showGags()
 			elif message == "show tasks":
