@@ -71,11 +71,25 @@ def gameControl():
 				return True
 		return False
 
-	def controlTurning(args, size, message):
-		if size > 1:
-			direction = args[1]
-			if(direction == "left" or direction == "right"):
-				controlMovement(args[1:], size - 1, message)
+	def controlMovement(args, size, message):
+		direction = message
+		t = 0
+		if(size > 1):
+			try:
+				t = float(args[size-1])
+			except:
+				t = 0
+			if(t > 0):
+				direction = " ".join(args[:(size-1)])
+		if(direction in movement["inputs"]):
+			key = movement["inputs"][direction]["key"]
+			if(t > 0):
+				newThread = threading.Thread(target = holdKey, args=(key, t))
+				newThread.start()
+				return True
+			else:
+				pyautogui.keyDown(key)
+				pyautogui.keyUp(key)
 				return True
 		return False
 
@@ -110,29 +124,59 @@ def gameControl():
 				return True
 		return False
 
+	def controlShow(args, size, message):
+		if(size == 2):
+			name = args[1]
+			if(name == "gags"):
+				showGags()
+				return True
+			elif(name == "tasks"):
+				showTasks()
+				return True
+		return False
+
+	def controlHide(args, size, message):
+		if(size == 2):
+			name = args[1]
+			if(name == "gags"):
+				hideGags()
+				return True
+			elif(name == "tasks"):
+				hideTasks()
+				return True
+		return False
+
 	def showGags():
 		global inGags
 		global inTasks
 		if (inGags):
-			pyautogui.keyUp('home')
-			inGags = False
-		else:
-			if(inTasks):
-				showTasks()
-			pyautogui.keyDown('home')
-			inGags = True
+			hideGags()
+		if (inTasks):
+			hideTasks()
+		pyautogui.keyDown('home')
+		inGags = True
 
 	def showTasks():
 		global inGags
 		global inTasks
 		if (inTasks):
+			hideTasks()
+		if (inGags):
+			hideGags()
+		pyautogui.keyDown('end')
+		inTasks = True
+
+	def hideGags():
+		global inGags
+		if(inGags):
+			pyautogui.keyUp('home')
+			inGags = False
+
+	def hideTasks():
+		global inTasks
+		if(inTasks):
 			pyautogui.keyUp('end')
 			inTasks = False
-		else:
-			if(inGags):
-				showGags()
-			pyautogui.keyDown('end')
-			inTasks = True
 
 	def inUnsafeClickBounds():
 		posx, posy = pyautogui.position()
@@ -145,39 +189,52 @@ def gameControl():
 		return False
 
 	def controlMouse(args, size, message):
-		if(size == 3):
+		direction = " ".join(args[1:])
+		x = -1
+		y = -1
+		t = 1
+		if(size > 2):
 			try:
-				x = min(int(args[1]), 1919)
-				y = min(int(args[2]), 1079)
+				x = min(int(args[size - 2]), 1919)
 			except:
 				x = -1
+			try:
+				y = min(int(args[size - 1]), 1079)
+			except:
 				y = -1
+			if(x > 0 and y > 0):
+				direction = " ".join(args[1:(size - 2)])
+			elif(y > 0):
+				direction = " ".join(args[1:(size - 1)])
+				t = y
+			else:
+				return False
+		if(direction == "click"):
+			for i in range(min(t, 15)):
+				clickMouse()
+			return True
+		elif(direction == "to"):
 			if(x > 0 and y > 0):
 				pyautogui.moveTo(x, y)
 				return True
-		if(size > 1):
-			direction = " ".join(args[1:])
-			if(direction == "click"):
-				clickMouse()
-				return True
-			elif(direction == "hold"):
-				mouseDown()
-				return True
-			elif(direction == "release"):
-				mouseUp()
-				return True
-			elif(direction in mouseDirections["inputs"]):
-				speed = mouseDirections["speed"]
-				mouseDirX = speed * mouseDirections["inputs"][direction]["x"]
-				mouseDirY = speed * mouseDirections["inputs"][direction]["y"]
-				if(mouseDirX == 0):
-					mouseDirX = None
-				if(mouseDirY == 0):
-					mouseDirY = None
-				pyautogui.moveRel(mouseDirX, mouseDirY)
-				posx, posy = pyautogui.position()
-				print(str(posx)+", "+str(posy))
-				return True
+		elif(direction == "hold"):
+			mouseDown()
+			return True
+		elif(direction == "release"):
+			mouseUp()
+			return True
+		elif(direction in mouseDirections["inputs"]):
+			speed = t * mouseDirections["speed"]
+			mouseDirX = speed * mouseDirections["inputs"][direction]["x"]
+			mouseDirY = speed * mouseDirections["inputs"][direction]["y"]
+			if(mouseDirX == 0):
+				mouseDirX = None
+			if(mouseDirY == 0):
+				mouseDirY = None
+			pyautogui.moveRel(mouseDirX, mouseDirY)
+			posx, posy = pyautogui.position()
+			print(str(posx)+", "+str(posy))
+			return True
 		return False
 
 	def mouseDown():
@@ -223,20 +280,18 @@ def gameControl():
 
 			print("reading " + message)
 
-			if(command in movement["inputs"] and controlMovement(args, argsLength, message)):
-				continue
-			elif(command == "turn" and controlTurning(args, argsLength, message)):
-				continue
+			if(controlMovement(args, argsLength, message)):
+				pass
 			elif(command == "use" and useGag(args, argsLength, message)):
-				continue
+				pass
 			elif(command == "buy" and buyGag(args, argsLength, message)):
-				continue
+				pass
 			elif(command == "mouse" and controlMouse(args, argsLength, message)):
-				continue
-			elif message == "show gags":
-				showGags()
-			elif message == "show tasks":
-				showTasks()
+				pass
+			elif (command == "show" and controlShow(args, argsLength, message)):
+				pass
+			elif (command == "hide" and controlHide(args, argsLength, message)):
+				pass
 			elif(message in keys["inputs"]):
 				keyPress(message)
 			elif(message in mouseLocations["inputs"]):

@@ -272,6 +272,14 @@
 			"x": 1316,
 			"y": 681
 		},
+		"battle run confirm": {
+			"x": 900,
+			"y": 704
+		},
+		"battle run cancel": {
+			"x": 1022,
+			"y": 704
+		},
 		"creator choose boy": {
 			"x": 747,
 			"y": 970
@@ -451,6 +459,18 @@
 		"creator skip toontorial": {
 			"x": 1108,
 			"y": 716
+		},
+		"trolley play again": {
+			"x": 1424,
+			"y": 683
+		},
+		"exit back to playground": {
+			"x": 1420,
+			"y": 581
+		},
+		"click dialogue": {
+			"x": 1132,
+			"y": 251
 		}
 	}
 }

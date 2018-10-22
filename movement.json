@@ -3,13 +3,40 @@
 		"up": {
 			"key": "up"
 		},
+		"forward": {
+			"key": "up"
+		},
+		"move forward": {
+			"key": "up"
+		},
+		"move up": {
+			"key": "up"
+		},
 		"back": {
+			"key": "down"
+		},
+		"move back": {
+			"key": "down"
+		},
+		"down": {
+			"key": "down"
+		},
+		"backward": {
+			"key": "down"
+		},
+		"move backward": {
 			"key": "down"
 		},
 		"right": {
 			"key": "right"
 		},
+		"turn right": {
+			"key": "right"
+		},
 		"left": {
+			"key": "left"
+		},
+		"turn left": {
 			"key": "left"
 		},
 		"jump": {
