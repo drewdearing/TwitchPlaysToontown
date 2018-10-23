@@ -242,7 +242,7 @@ def gameControl():
 			print("WARNING: unsafe click detected")
 			return False
 		else:
-			pyautogui.mouseDown();
+			pyautogui.mouseDown()
 			return True
 
 	def mouseUp():
@@ -263,6 +263,7 @@ def gameControl():
 		clickMouse()
 
 	def typeMessage(message):
+
 		pyautogui.typewrite(message, interval=0.01)
 		pyautogui.keyDown("enter")
 		pyautogui.keyUp("enter")
@@ -356,8 +357,9 @@ def twitch():
 				continue
 			else:
 				msg = getMessageDict(line)
-				print(msg["user"] +": " +msg["message"])
-				messageList.append(msg)
+				if(msg["user"] != "nightbot"):
+					print(msg["user"] +": " +msg["message"])
+					messageList.append(msg)
 
 if __name__ == '__main__':
 	thread1 = threading.Thread(target = twitch)
